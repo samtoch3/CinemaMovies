@@ -7,4 +7,6 @@ Creer un projet react : ``npx create-react-app react-movies``.
 Installation des dependances : ``npm i react-router-dom react-dom sass axios``
 ###
 Lancement du projet : ``npm start``
+###
+Pour avoir la structure d'un composant : ``rsc (react stateless component)``
 
