@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
+import Form from "../components/Form";
 
 const Home = () => {
     return ( <
-        div >
+        div className = "home-page" >
         <
-        h1 > HOME < /h1> <
+        Header > < /Header> <Form></Form >
+        <
         /div>
     );
 };

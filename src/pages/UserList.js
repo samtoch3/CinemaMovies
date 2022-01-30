@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
 
 const UserList = () => {
     return ( <
         div >
         <
-        h1 > USER LIST < /h1>  <
+        Header > < /Header> <
         /div>
     );
 };
