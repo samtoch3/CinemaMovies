@@ -24,9 +24,12 @@ const Form = () => {
         form >
         <
         input type = "text"
-        placeholder = "entrer le titre d'un film"
+        placeholder = "Entrer le titre d'un film"
         id = "search-input" /
         >
+        <
+        input type = "submit"
+        value = "🔍" / >
         <
         /form>{" "} <
         div className = "btn-sort-container" >
@@ -41,22 +44,22 @@ const Form = () => {
         /div>{" "} <
         /div>{" "} <
         /div>{" "} <
-        div className = "result" > {
+        div className = "result" > { " " } {
             moviesData
-            .slice(0, 12)
-            .sort((a, b) => {
-                if (sortGoodBad === "goodToBad") {
-                    return b.vote_average - a.vote_average;
-                } else if (sortGoodBad === "badToGood") {
-                    return a.vote_average - b.vote_average;
-                }
-            })
-            .map((movie) => ( <
-                Card key = { movie.id }
-                movie = { movie }
-                />
-            ))
-        } <
+                .slice(0, 12)
+                .sort((a, b) => {
+                    if (sortGoodBad === "goodToBad") {
+                        return b.vote_average - a.vote_average;
+                    } else if (sortGoodBad === "badToGood") {
+                        return a.vote_average - b.vote_average;
+                    }
+                })
+                .map((movie) => ( <
+                    Card key = { movie.id }
+                    movie = { movie }
+                    />
+                ))
+        } { " " } <
         /div>{" "} <
         /div>
     );

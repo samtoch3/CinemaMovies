@@ -104,50 +104,44 @@ const Card = ({ movie }) => {
                     alt = "affiche film" /
                     >
                     <
-                    h2 > { movie.title } < /h2> {
+                    h2 > { movie.title } < /h2>{" "} {
                         movie.release_date ? ( <
-                            h5 > Sorti le: { dateFormater(movie.release_date) } < /h5>
+                            h5 > Sortie le: { dateFormater(movie.release_date) } < /h5>
                         ) : (
                             ""
                         )
-                    } <
-                    h4 > { movie.vote_average }
+                    } { " " } <
+                    h4 > { " " } { movie.vote_average }
                     /10 <span>⭐</span >
                     <
-                    /h4>
-
-                    <
-                    ul > {
+                    /h4>{" "} <
+                    ul > { " " } {
                         movie.genre_ids ?
-                        genreFinder() :
+                            genreFinder() :
                             movie.genres.map((genre, index) => ( <
-                            li key = { index } > { genre.name } < /li>
-                        ))
-                    } <
-                    /ul> {
-                        movie.overview ? < h3 > Synopsis < /h3> : ""} <
-                            p > { movie.overview } < /p>
-
-                        {
-                            movie.genre_ids ? ( <
-                                div className = "btn"
-                                onClick = {
-                                    () => addStorage() } >
-                                Ajouter aux coups de coeur <
-                                /div>
-                            ) : ( <
-                                div className = "btn"
-                                onClick = {
-                                    () => {
-                                        deleteStorage();
-                                        window.location.reload();
-                                    }
-                                } >
-                                Supprimer de la liste <
-                                /div>
-                            )
-                        } <
-                        /div>
+                                li key = { index } > { genre.name } < /li>
+                            ))
+                    } { " " } <
+                    /ul>{" "} {
+                        movie.overview ? < h3 > Synopsis < /h3> : ""} <p> {movie.overview} </p > { " " } {
+                                movie.genre_ids ? ( <
+                                    div className = "btn"
+                                    onClick = {
+                                        () => addStorage() } > { " " }♡ { " " } <
+                                    /div>
+                                ) : ( <
+                                    div className = "btn"
+                                    onClick = {
+                                        () => {
+                                            deleteStorage();
+                                            window.location.reload();
+                                        }
+                                    } >
+                                    Supprimer de la liste { " " } <
+                                    /div>
+                                )
+                            } { " " } <
+                            /div>
                     );
                 };
 
